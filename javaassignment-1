@@ -13,7 +13,7 @@ public class EvenOdd {
             System.out.println(num + " is odd.");
         }
         
-        scanner.close();
+        sc.close();
     }
     
     public static boolean isEven(int number) {
