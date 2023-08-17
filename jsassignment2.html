@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Popup Example</title>
+    <style>
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .close-button {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<button id="showPopup">Show Popup</button>
+<div class="popup" id="popup">
+    <span class="close-button" id="closeButton">&times;</span>
+    <p>This is a popup referring to day 3 session.</p>
+</div>
+
+<script>
+    const showPopupButton = document.getElementById('showPopup');
+    const popup = document.getElementById('popup');
+    const closeButton = document.getElementById('closeButton');
+
+    showPopupButton.addEventListener('click', () => {
+        popup.style.display = 'block';
+    });
+
+    closeButton.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+</script>
+
+</body>
+</html>
